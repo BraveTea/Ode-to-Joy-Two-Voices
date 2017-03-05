@@ -1,6 +1,6 @@
 #include "pitches.h"
 
-const int ROW_COUNT; //Everything to do with the array someArray is useless code written to obtain a arduino designation
+const int ROW_COUNT; //Everything to do with the arrays someArray and someOtherArray is useless code written to obtain an arduino designation
 const int COL_COUNT;
 ROW_COUNT = 5;
 COL_COUNT = 5;
@@ -12,6 +12,24 @@ int someArray[ROW_COUNT][COL_COUNT] =
   {11, 12, 13, 14, 15},
   {16, 17, 18, 19, 20},
   {21, 22, 23, 24, 25}
+};
+
+int someOtherArray[ROW_COUNT][COL_COUNT] = 
+{
+  {11, 21, 31, 41, 51},
+  {61, 71, 81, 91, 101},
+  {111, 121, 131, 141, 151},
+  {161, 171, 181, 191, 201},
+  {211, 221, 231, 241, 251}
+};
+
+int someOtherArrayAgain[ROW_COUNT][COL_COUNT] = 
+{
+  {11, 21, 31, 41, 51},
+  {61, 71, 81, 91, 101},
+  {111, 121, 131, 141, 151},
+  {161, 171, 181, 191, 201},
+  {211, 221, 231, 241, 251}
 };
 
 int melody1[] =
@@ -68,5 +86,6 @@ void loop()
       Serial.println(j);
     }
   }
+  delay(3000);
 }
 
