@@ -1,5 +1,19 @@
 #include "pitches.h"
 
+const int ROW_COUNT; //Everything to do with the array someArray is useless code written to obtain a arduino designation
+const int COL_COUNT;
+ROW_COUNT = 5;
+COL_COUNT = 5;
+
+int someArray[ROW_COUNT][COL_COUNT] = 
+{
+  {1, 2, 3, 4, 5},
+  {6, 7, 8, 9, 10},
+  {11, 12, 13, 14, 15},
+  {16, 17, 18, 19, 20},
+  {21, 22, 23, 24, 25}
+};
+
 int melody1[] =
 {
   NOTE_E4, NOTE_E4, NOTE_F4, NOTE_G4, NOTE_G4, NOTE_F4, NOTE_E4, NOTE_D4,
@@ -38,156 +52,21 @@ void setup()
     noTone(8);
 
   }
+  Serial.begin(9600); //useless code
+  randomSeed(A0); //useless code
 }
-/* faking all these lines in order to get an arduino designation in GitHub instead of a C designation
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
 void loop()
 {
-
+  for (int i = 0; i < ROW_COUNT; i++)
+  {
+    for (int j = 0; j < COL_COUNT; j++)
+    {
+      Serial.print("The Coordinates are: ");
+      Serial.print(i);
+      Serial.print("\t &\t");
+      Serial.println(j);
+    }
+  }
 }
 
